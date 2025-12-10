@@ -13,6 +13,8 @@ for q in quotes:
 
 La pagina que le hicimos scraping es https://quotes.toscrape.com
 
+Muestra de los datos que estas capturando en el Scraaping:
+
 “The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”
 “It is our choices, Harry, that show what we truly are, far more than our abilities.”
 “There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”
