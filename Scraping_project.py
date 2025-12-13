@@ -1,14 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
-
-url = "https://quotes.toscrape.com"
+import textwrap
+url = "https://quotes.toscrape.com/"
 respuesta = requests.get(url)
 soup = BeautifulSoup(respuesta.text, "html.parser")
-
-quotes = soup.find_all("span", class_="text")
-
-for q in quotes:
-    print(q.text)
+for quote in soup.find_all("div", class_="quote"):
+    texto = quote.find("span", class_="text").text
+    autor = quote.find("small", class_="author").text
+    tags = []
+    for tag in quote.find_all("a", class_="tag"):
+        tags.append(tag.text)
+    print("Cita:")
+    print(textwrap.fill(texto, width=60))
+    print("Autor:", autor)
+    print("Tags:", ", ".join(tags))
+    print("-" * 40)
 
 
 La pagina que le hicimos scraping es https://quotes.toscrape.com
