@@ -17,7 +17,7 @@ for quote in soup.find_all("div", class_="quote"):
     print("-" * 40)
 
 
-La pagina que le hicimos scraping es https://quotes.toscrape.com
+La pagina que mi pareja de grupo y yo le hicimos scraping es https://quotes.toscrape.com   
 
 Muestra de los datos que estas capturando en el Scraaping:
 
